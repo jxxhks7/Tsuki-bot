@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tsuki Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+  <script src="{{ url_for('static', filename='/script.js') }}" defer></script>
+
+
+
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="{{ url_for('static', filename='assets/audio/background.mp3') }}" type="audio/mpeg">
+  </audio>
+  <div class="floating-particles" id="floating-particles"></div>
+
+  <div class="container">
+    <h1 class="title">🌸 Tsuki's Companion Bot 🌙</h1>
+
+    <div class="header-section">
+    <!-- Character Selector -->
+    <div class="character-select-container">
+      <label for="character-select">Choose your companion:</label>
+      <select id="character-select">
+        <option value="Tsuki">Tsuki</option>
+        <option value="Moca">Moca</option>
+        <option value="Chi">Chi</option>
+        <option value="Yori">Yori</option>
+        <option value="Rosemary">Rosemary</option>
+        <option value="Momo">Momo</option>
+        <option value="Dawn">Dawn</option>
+        <option value="Mermaid">Mermaid</option>
+      </select>
+    </div>
+    </div>
+
+    <div class="content-row">
+    <!-- LEFT SIDE: Character & Food -->
+    <div class="character-panel">
+    <!-- Character Display -->
+    <div class="character-box">
+      <div id="drop-message">Yum~</div>
+      <img id="character-gif" src="/static/assets/gifs/tsuki.gif" alt="Tsuki" />
+
+    </div>
+
+    <!-- Food Bar -->
+    <div class="food-bar">
+      <img src="/static/assets/images/chocolatebun.jpg" class="food" data-food="chocolatebun" draggable="true" />
+      <img src="/static/assets/images/chips.jpg" class="food" data-food="chips" draggable="true" />
+      <img src="/static/assets/images/tea.jpg" class="food" data-food="tea" draggable="true" />
+      <img src="/static/assets/images/noodles.jpg" class="food" data-food="noodles" draggable="true" />
+    </div>
+    </div>
+
+    <!-- Chat Interface -->
+    <div class="chatbox">
+  <div class="chat-log" id="chat-log"></div>
+
+  <div class="chat-input-area">
+    <input
+      type="text"
+      id="user-input"
+      placeholder="💬 Talk to your companion..."
+    />
+    <button id="send-btn">Send</button>
+  </div>
+  </div>
+  </div>
+
+
+    <!-- Music Control -->
+    <div class="music-controls">
+        <button id="back-track-btn"> ◁ Back</button>
+        <button id="play-pause-btn"> ▐ ▌ Play</button>
+        <button id="next-track-btn"> ▷ Next</button>
+    </div>
+  </div>
+
+  
+</body>
+</html>
