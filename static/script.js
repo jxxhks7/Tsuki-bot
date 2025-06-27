@@ -85,13 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const characterEatingGIFs = {
     Tsuki: {
       chocolatebun: "/static/assets/gifs/tsuki-chocolatebun.gif",
-      chips: "/static/assets/gifs/tsuki-eating.gif",
+      chips: "/static/assets/gifs/tsuki-chips.gif",
       tea: "/static/assets/gifs/tsuki-tea.gif",
       noodles: "/static/assets/gifs/tsuki-noodles.gif"
     },
     Moca: {
+      chocolatebun: "/static/assets/gifs/moca-chocolatebun.gif",
       chips: "/static/assets/gifs/moca-eating-chips.gif",
-      chocolatebun: "/static/assets/gifs/moca-eating-carrot.gif"
+      
+      tea: "/static/assets/gifs/moca-tea.gif",
+      carrot: "/static/assets/gifs/moca-carrot.gif"
     }
   };
 
