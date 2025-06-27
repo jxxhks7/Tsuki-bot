@@ -9,7 +9,7 @@ body {
   font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif;
   background: url('assets/images/background.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #FDFAF6;
+  color: #493628;
   display: flex;
   justify-content: center;
   padding: 1.5rem;
@@ -19,7 +19,7 @@ body {
 .container {
   max-width: 1200px;
   width: 100%;
-  background-color: #493628;
+  background-color: #6F826A;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -30,7 +30,7 @@ body {
   text-align: center;
   font-size: 1.9rem;
   margin-bottom: 1rem;
-  color: #FFF9BF;
+  color: #C1CFA1;
 }
 
 /* Character Selector */
@@ -49,11 +49,11 @@ body {
 #character-select {
   padding: 0.4rem 1rem;
   border-radius: 10px;
-  border: 2px solid #dabbaa;
-  background-color: #fff0f5;
+  border: 2px solid #493628;
+  background-color: #C1CFA1;
   font-weight: bold;
   font-size: 1rem;
-  color: #dabbaa;
+  color: #735557;
 }
 
 /* Layout */
@@ -76,7 +76,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 480px;
-  background-color: #fffef8;
+  background-color: #C1CFA1;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -155,8 +155,8 @@ body {
   padding: 1rem;
   font-size: 1.1rem;
   line-height: 1.6;
-  background-color: #B99470;
-  border-bottom: 2px solid #f3d5d5;
+  background-color: #AB886D;
+  border-bottom: 2px solid #EDE8DC;
 }
 
 /* Chat Input Area */
@@ -164,8 +164,8 @@ body {
   display: flex;
   gap: 0.5rem;
   padding: 0.8rem;
-  background-color: #fff;
-  border-top: 2px solid #f3d5d5;
+  background-color: #C1CFA1;
+  border-top: 2px solid #EDE8DC;
   position: sticky;
   bottom: 0;
   z-index: 10;
@@ -176,7 +176,7 @@ body {
   padding: 0.8rem 1rem;
   font-size: 1rem;
   border-radius: 10px;
-  border: 2px solid #dabbaa;
+  border: 2px solid #D29F80;
   background-color: #fffefb;
   outline: none;
   font-family: inherit;
@@ -184,18 +184,26 @@ body {
 
 #send-btn {
   padding: 0.8rem 1.4rem;
-  background-color: #d9b8ff;
-  color: white;
+  background-color: #AB886D;
+  border: 1px solid #493628;   /* 🟤 Dark border added */
+  color: #493628;
   font-weight: bold;
-  border: none;
   border-radius: 10px;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.2s ease;
+  font-family: 'Comic Neue', 'Poppins', sans-serif;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(255, 164, 190, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #send-btn:hover {
-  background-color: #ffadc9;
+  background-color: #D6C0B3; /* ✨ Light brown hover color */
+  transform: translateY(-1px);
+}
+
+#send-btn:active {
+  transform: scale(0.95);
 }
 
 /* Music Buttons */
@@ -290,12 +298,13 @@ body {
 
 /* save and clr*/
 .chat-input-area button {
-  background-color: #ffe7f0;
-  border: 1px solid #ffa7c4;
-  color: #4b2e2e;
+  background-color: #AB886D;
+  border: 1px solid #493628;
+  color: #493628;
   padding: 8px 14px;
   margin: 5px;
   border-radius: 10px;
+  font-weight: bold;
   font-family: 'Comic Neue', 'Poppins', sans-serif;
   font-size: 14px;
   cursor: pointer;
@@ -304,7 +313,7 @@ body {
 }
 
 .chat-input-area button:hover {
-  background-color: #ffd2e3;
+  background-color: #D6C0B3;
   transform: translateY(-1px);
 }
 

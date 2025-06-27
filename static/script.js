@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bgMusic.currentTime = timeMarkers[currentTrackIndex];
     bgMusic.play();
     isPlaying = true;
-    playPauseBtn.textContent = "⏸ Pause";
+    playPauseBtn.textContent = " ▌▌ Pause";
   }
 
   function pauseTrack() {
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
     saveChatToStorage();
     saveBtn.textContent = "✅ Saved!";
     setTimeout(() => {
-      saveBtn.textContent = "💾 Save";
+      saveBtn.textContent = "⎙ Save";
     }, 1500);
   });
 
