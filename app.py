@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, jsonify
-from groq import Groq
 from dotenv import load_dotenv
 import os
+import requests
 
 # Load .env variables
 load_dotenv()
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 app = Flask(__name__)
 
@@ -35,13 +35,21 @@ def chat():
     messages.append({"role": "user", "content": user_input})
 
     try:
-        response = client.chat.completions.create(
-            model="llama3-8b-8192",
-            messages=messages
+        response = requests.post(
+            "https://api.groq.com/openai/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {GROQ_API_KEY}",
+                "Content-Type": "application/json"
+            },
+            json={
+                "model": "llama3-8b-8192",
+                "messages": messages
+            }
         )
-        reply = response.choices[0].message.content
-        reply = reply.strip()
-        max_chars = 300  # or 250, depending on how short you want it
+        response.raise_for_status()
+        reply = response.json()['choices'][0]['message']['content'].strip()
+
+        max_chars = 300
         if len(reply) > max_chars:
             reply = reply[:max_chars].rsplit('.', 1)[0] + ". 🌙"
 
@@ -55,4 +63,4 @@ def chat():
         })
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=3000, debug=True)
