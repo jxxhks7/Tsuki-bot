@@ -1,0 +1,13 @@
+# Ignore environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Replit metadata (optional)
+*.replit
+replit.nix
+
+# VS Code settings (optional)
+.vscode/
