@@ -320,3 +320,72 @@ body {
 .chat-input-area button:active {
   transform: scale(0.95);
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .content-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .character-panel,
+  .chatbox {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .character-box img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .food-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .food {
+    width: 60px;
+    height: 60px;
+  }
+
+  .chat-input-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chat-input-area input,
+  .chat-input-area button {
+    width: 100%;
+    font-size: 1rem;
+    margin: 0.3rem 0;
+  }
+
+  .music-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  .music-controls button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .character-select-container select {
+    width: 100%;
+  }
+
+  .chat-log {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}
